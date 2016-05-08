@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace ConsoleApplication1
     {
         public double Divide(double dividend, double divisor)
         {
-            Trace.Assert(0 != divisor);
+            Contract.Assert(0 != divisor);
 
             var result = dividend / divisor;
             return result;

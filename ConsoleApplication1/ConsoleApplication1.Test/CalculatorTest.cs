@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using biz.dfch.CS.Utilities.Testing;
 
 namespace ConsoleApplication1.Test
 {
@@ -24,7 +25,7 @@ namespace ConsoleApplication1.Test
         }
 
         [TestMethod]
-        [ExpectedException(typeof(System.Exception))]
+        [ExpectContractFailure]
         public void DividingByZeroThrowsException()
         {
             // Arrange
