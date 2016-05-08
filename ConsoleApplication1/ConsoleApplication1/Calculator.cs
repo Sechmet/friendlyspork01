@@ -28,7 +28,9 @@ namespace ConsoleApplication1
     {
         public double Divide(double dividend, double divisor)
         {
-            Contract.Assert(0 != divisor);
+            Contract.Requires(0 != divisor);
+            Contract.Requires(1000 > divisor);
+            Contract.Ensures(0 < Contract.Result<double>());
 
             var result = dividend / divisor;
             return result;

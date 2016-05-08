@@ -25,6 +25,23 @@ namespace ConsoleApplication1.Test
         }
 
         [TestMethod]
+        public void DividingTwoLargeNumberReturnsCorrectResult()
+        {
+            // Arrange
+            var dividend = -1000;
+            var divisor = 1;
+            var expectedResult = -1000;
+
+            var calc = new Calculator();
+
+            // Act
+            var result = calc.Divide(dividend, divisor);
+
+            // Assert
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        [TestMethod]
         [ExpectContractFailure]
         public void DividingByZeroThrowsException()
         {
@@ -40,5 +57,5 @@ namespace ConsoleApplication1.Test
             // Assert
             // N/A
         }
-}
+    }
 }

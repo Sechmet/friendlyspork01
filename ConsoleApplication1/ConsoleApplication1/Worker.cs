@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,9 @@ namespace ConsoleApplication1
 
         public string PrintMessageUntilNextMinute(string baseMessage, int maxInvocations)
         {
+            Contract.Requires(!string.IsNullOrWhiteSpace(baseMessage));
+            Contract.Requires(0 <= maxInvocations);
+
             string result = "Tralala";
 
             var startingMinute = DateTimeOffset.Now.Minute;
