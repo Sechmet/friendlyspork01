@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Worker
+    public class Worker
     {
         public void DoMagic()
         {
