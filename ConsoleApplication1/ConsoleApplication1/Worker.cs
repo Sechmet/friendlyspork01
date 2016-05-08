@@ -56,5 +56,26 @@ namespace ConsoleApplication1
             //string message1 = string.Empty;
             //Debug.WriteLine(message1);        
         }
+
+        public string PrintMessageUntilNextMinute(string baseMessage, int maxInvocations)
+        {
+            string result = "Tralala";
+
+            var startingMinute = DateTimeOffset.Now.Minute;
+
+            string message = baseMessage;
+            while(startingMinute == DateTimeOffset.Now.Minute)
+            {
+                message = message + "@";
+                Debug.WriteLine(message);
+                System.Threading.Thread.Sleep(1000);
+            }
+
+            result = message;
+            return result;
+        }
+
+        
+
     }
 }

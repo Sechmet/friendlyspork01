@@ -13,6 +13,8 @@ namespace ConsoleApplication1
         {
             var worker = new Worker();
             worker.DoMagic();
+
+            worker.PrintMessageUntilNextMinute("my base message", 0);
         }
     }
 }
