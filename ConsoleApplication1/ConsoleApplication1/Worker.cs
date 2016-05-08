@@ -38,8 +38,16 @@ namespace ConsoleApplication1
             Debug.WriteLine(counter);
 
             string message;
-            message = "Irene ist super";
-            for(counter = 0; counter < 100; counter++)
+            if(DateTimeOffset.Now.Second < 30)
+            {
+                message = "Irene ist super";
+            }
+            else
+            {
+                message = "Irene ist immer noch ganz ok";
+            }
+
+            for(counter = 0; counter < 10; counter++)
             {
                 message = message + "er";
                 Debug.WriteLine(message);
